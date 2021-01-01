@@ -3,7 +3,6 @@ package com.indong.motionlayout
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.commit
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -30,6 +29,10 @@ class MainActivity : AppCompatActivity() {
         buttonKeyframeCycle.setOnClickListener {
             startActivity(Type.KEYFRAME_CYCLE)
         }
+
+        buttonCoordinatorLayout.setOnClickListener {
+            startActivity(Type.COORDINATOR_LAYOUT)
+        }
     }
 
     private fun startActivity(type: Type) {
@@ -39,6 +42,7 @@ class MainActivity : AppCompatActivity() {
             Type.KEYFRAME -> KeyframeActivity::class.java
             Type.KEYFRAME_INTERPOLATION -> KeyframeInterpolationActivity::class.java
             Type.KEYFRAME_CYCLE -> KeyframeCycleActivity::class.java
+            Type.COORDINATOR_LAYOUT -> CoordinatorLayoutActivity::class.java
         }
 
         val intent = Intent(this, cls)
@@ -50,6 +54,7 @@ class MainActivity : AppCompatActivity() {
         IMAGE_TRANSITION,
         KEYFRAME,
         KEYFRAME_INTERPOLATION,
-        KEYFRAME_CYCLE
+        KEYFRAME_CYCLE,
+        COORDINATOR_LAYOUT
     }
 }
