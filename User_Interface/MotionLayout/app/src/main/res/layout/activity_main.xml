@@ -30,13 +30,19 @@
             android:id="@+id/buttonBackgroundColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="BackgroundColor" />
+            android:text="Background Color" />
 
         <Button
             android:id="@+id/buttonImageTransition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ImageTransition" />
+            android:text="Image Transition" />
+
+        <Button
+            android:id="@+id/buttonKeyframe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keyframe" />
 
     </LinearLayout>
 

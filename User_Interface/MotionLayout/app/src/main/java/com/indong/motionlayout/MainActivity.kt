@@ -18,12 +18,16 @@ class MainActivity : AppCompatActivity() {
         buttonImageTransition.setOnClickListener {
             startActivity(Type.IMAGE_TRANSITION)
         }
+        buttonKeyframe.setOnClickListener {
+            startActivity(Type.KEYFRAME)
+        }
     }
 
     private fun startActivity(type: Type) {
         val cls = when (type) {
             Type.BACKGROUND_COLOR -> BackgroundColorActivity::class.java
             Type.IMAGE_TRANSITION -> ImageTransitionActivity::class.java
+            Type.KEYFRAME -> KeyframeActivity::class.java
         }
 
         val intent = Intent(this, cls)
@@ -32,6 +36,7 @@ class MainActivity : AppCompatActivity() {
 
     enum class Type {
         BACKGROUND_COLOR,
-        IMAGE_TRANSITION
+        IMAGE_TRANSITION,
+        KEYFRAME
     }
 }
