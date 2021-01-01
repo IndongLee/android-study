@@ -33,6 +33,10 @@ class MainActivity : AppCompatActivity() {
         buttonCoordinatorLayout.setOnClickListener {
             startActivity(Type.COORDINATOR_LAYOUT)
         }
+
+        buttonCoordinatorLayout2.setOnClickListener {
+            startActivity(Type.COORDINATOR_LAYOUT2)
+        }
     }
 
     private fun startActivity(type: Type) {
@@ -43,6 +47,7 @@ class MainActivity : AppCompatActivity() {
             Type.KEYFRAME_INTERPOLATION -> KeyframeInterpolationActivity::class.java
             Type.KEYFRAME_CYCLE -> KeyframeCycleActivity::class.java
             Type.COORDINATOR_LAYOUT -> CoordinatorLayoutActivity::class.java
+            Type.COORDINATOR_LAYOUT2 -> CoordinatorLayout2Activity::class.java
         }
 
         val intent = Intent(this, cls)
@@ -55,6 +60,7 @@ class MainActivity : AppCompatActivity() {
         KEYFRAME,
         KEYFRAME_INTERPOLATION,
         KEYFRAME_CYCLE,
-        COORDINATOR_LAYOUT
+        COORDINATOR_LAYOUT,
+        COORDINATOR_LAYOUT2
     }
 }
