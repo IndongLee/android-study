@@ -14,11 +14,16 @@ class MainActivity : AppCompatActivity() {
         buttonBackgroundColor.setOnClickListener {
             startActivity(Type.BACKGROUND_COLOR)
         }
+
+        buttonImageTransition.setOnClickListener {
+            startActivity(Type.IMAGE_TRANSITION)
+        }
     }
 
     private fun startActivity(type: Type) {
         val cls = when (type) {
             Type.BACKGROUND_COLOR -> BackgroundColorActivity::class.java
+            Type.IMAGE_TRANSITION -> ImageTransitionActivity::class.java
         }
 
         val intent = Intent(this, cls)
@@ -26,6 +31,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     enum class Type {
-        BACKGROUND_COLOR
+        BACKGROUND_COLOR,
+        IMAGE_TRANSITION
     }
 }

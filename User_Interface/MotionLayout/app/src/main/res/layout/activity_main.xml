@@ -32,6 +32,12 @@
             android:layout_height="wrap_content"
             android:text="BackgroundColor" />
 
+        <Button
+            android:id="@+id/buttonImageTransition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ImageTransition" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
