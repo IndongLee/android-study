@@ -59,7 +59,13 @@
             android:id="@+id/buttonKeyframeInterpolation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="KeyframeInterpolation" />
+            android:text="Keyframe Interpolation" />
+
+        <Button
+            android:id="@+id/buttonKeyframeCycle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keyframe Cycle" />
 
     </LinearLayout>
 
