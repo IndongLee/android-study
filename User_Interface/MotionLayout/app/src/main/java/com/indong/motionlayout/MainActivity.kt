@@ -18,8 +18,13 @@ class MainActivity : AppCompatActivity() {
         buttonImageTransition.setOnClickListener {
             startActivity(Type.IMAGE_TRANSITION)
         }
+
         buttonKeyframe.setOnClickListener {
             startActivity(Type.KEYFRAME)
+        }
+
+        buttonKeyframeInterpolation.setOnClickListener {
+            startActivity(Type.KEYFRAME_INTERPOLATION)
         }
     }
 
@@ -28,6 +33,8 @@ class MainActivity : AppCompatActivity() {
             Type.BACKGROUND_COLOR -> BackgroundColorActivity::class.java
             Type.IMAGE_TRANSITION -> ImageTransitionActivity::class.java
             Type.KEYFRAME -> KeyframeActivity::class.java
+            Type.KEYFRAME_INTERPOLATION -> KeyframeInterpolationActivity::class.java
+
         }
 
         val intent = Intent(this, cls)
@@ -37,6 +44,7 @@ class MainActivity : AppCompatActivity() {
     enum class Type {
         BACKGROUND_COLOR,
         IMAGE_TRANSITION,
-        KEYFRAME
+        KEYFRAME,
+        KEYFRAME_INTERPOLATION
     }
 }
