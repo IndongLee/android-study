@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
             Type.SIDE_PANEL -> SidePanelActivity::class.java
             Type.PARALLAX -> ParallaxActivity::class.java
             Type.VIEW_PAGER -> ViewPagerActivity::class.java
-            Type.VIEW_PAGER_LOTTIE -> ParallaxActivity::class.java
+            Type.VIEW_PAGER_LOTTIE -> ViewPagerLottieActivity::class.java
         }
 
         val intent = Intent(this, cls)
