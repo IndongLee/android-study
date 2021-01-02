@@ -121,4 +121,33 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout4">
+
+        <Button
+            android:id="@+id/buttonParallax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Parallax" />
+
+        <Button
+            android:id="@+id/buttonViewPager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Pager" />
+
+        <Button
+            android:id="@+id/buttonViewPagerLottie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Pager Lottie" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.motion.widget.MotionLayout>

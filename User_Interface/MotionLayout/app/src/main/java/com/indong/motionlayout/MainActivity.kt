@@ -49,6 +49,18 @@ class MainActivity : AppCompatActivity() {
         buttonSidePanel.setOnClickListener {
             startActivity(Type.SIDE_PANEL)
         }
+
+        buttonParallax.setOnClickListener {
+            startActivity(Type.PARALLAX)
+        }
+
+        buttonViewPager.setOnClickListener {
+            startActivity(Type.VIEW_PAGER)
+        }
+
+        buttonViewPagerLottie.setOnClickListener {
+            startActivity(Type.VIEW_PAGER_LOTTIE)
+        }
     }
 
     private fun startActivity(type: Type) {
@@ -63,6 +75,9 @@ class MainActivity : AppCompatActivity() {
             Type.DRAWER_LAYOUT -> DrawerLayoutActivity::class.java
             Type.DRAWER_LAYOUT2 -> DrawerLayout2Activity::class.java
             Type.SIDE_PANEL -> SidePanelActivity::class.java
+            Type.PARALLAX -> ParallaxActivity::class.java
+            Type.VIEW_PAGER -> ParallaxActivity::class.java
+            Type.VIEW_PAGER_LOTTIE -> ParallaxActivity::class.java
         }
 
         val intent = Intent(this, cls)
@@ -79,6 +94,9 @@ class MainActivity : AppCompatActivity() {
         COORDINATOR_LAYOUT2,
         DRAWER_LAYOUT,
         DRAWER_LAYOUT2,
-        SIDE_PANEL
+        SIDE_PANEL,
+        PARALLAX,
+        VIEW_PAGER,
+        VIEW_PAGER_LOTTIE
     }
 }
