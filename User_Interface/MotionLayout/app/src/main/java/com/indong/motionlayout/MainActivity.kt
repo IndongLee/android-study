@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
             Type.DRAWER_LAYOUT2 -> DrawerLayout2Activity::class.java
             Type.SIDE_PANEL -> SidePanelActivity::class.java
             Type.PARALLAX -> ParallaxActivity::class.java
-            Type.VIEW_PAGER -> ParallaxActivity::class.java
+            Type.VIEW_PAGER -> ViewPagerActivity::class.java
             Type.VIEW_PAGER_LOTTIE -> ParallaxActivity::class.java
         }
 

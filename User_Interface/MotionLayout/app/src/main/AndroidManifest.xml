@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".ParallaxActivity"></activity>
+        <activity android:name=".ViewPagerActivity"></activity>
+        <activity android:name=".ParallaxActivity" />
         <activity android:name=".SidePanelActivity" />
         <activity android:name=".DrawerLayout2Activity" />
         <activity android:name=".DrawerLayoutActivity" />
