@@ -45,6 +45,10 @@ class MainActivity : AppCompatActivity() {
         buttonDrawerLayout2.setOnClickListener {
             startActivity(Type.DRAWER_LAYOUT2)
         }
+
+        buttonSidePanel.setOnClickListener {
+            startActivity(Type.SIDE_PANEL)
+        }
     }
 
     private fun startActivity(type: Type) {
@@ -58,6 +62,7 @@ class MainActivity : AppCompatActivity() {
             Type.COORDINATOR_LAYOUT2 -> CoordinatorLayout2Activity::class.java
             Type.DRAWER_LAYOUT -> DrawerLayoutActivity::class.java
             Type.DRAWER_LAYOUT2 -> DrawerLayout2Activity::class.java
+            Type.SIDE_PANEL -> SidePanelActivity::class.java
         }
 
         val intent = Intent(this, cls)
@@ -73,6 +78,7 @@ class MainActivity : AppCompatActivity() {
         COORDINATOR_LAYOUT,
         COORDINATOR_LAYOUT2,
         DRAWER_LAYOUT,
-        DRAWER_LAYOUT2
+        DRAWER_LAYOUT2,
+        SIDE_PANEL
     }
 }

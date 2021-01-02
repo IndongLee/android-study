@@ -113,6 +113,12 @@
             android:layout_height="wrap_content"
             android:text="DrawerLayout2" />
 
+        <Button
+            android:id="@+id/buttonSidePanel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Side Panel" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

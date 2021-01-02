@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".DrawerLayout2Activity"></activity>
+        <activity android:name=".SidePanelActivity"></activity>
+        <activity android:name=".DrawerLayout2Activity" />
         <activity android:name=".DrawerLayoutActivity" />
         <activity android:name=".CoordinatorLayout2Activity" />
         <activity android:name=".CoordinatorLayoutActivity" />
