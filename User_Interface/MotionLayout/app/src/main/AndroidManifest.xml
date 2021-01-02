@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".ViewPagerLottieActivity"></activity>
+        <activity android:name=".ComplexMotion3Activity"></activity>
+        <activity android:name=".ComplexMotion2Activity" />
+        <activity android:name=".ComplexMotionActivity" />
+        <activity android:name=".ViewPagerLottieActivity" />
         <activity android:name=".ViewPagerActivity" />
         <activity android:name=".ParallaxActivity" />
         <activity android:name=".SidePanelActivity" />

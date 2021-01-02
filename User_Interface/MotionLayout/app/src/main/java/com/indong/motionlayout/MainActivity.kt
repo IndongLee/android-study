@@ -61,6 +61,18 @@ class MainActivity : AppCompatActivity() {
         buttonViewPagerLottie.setOnClickListener {
             startActivity(Type.VIEW_PAGER_LOTTIE)
         }
+
+        buttonComplexMotion.setOnClickListener {
+            startActivity(Type.COMPLEX_MOTION)
+        }
+
+        buttonComplexMotion2.setOnClickListener {
+            startActivity(Type.COMPLEX_MOTION2)
+        }
+
+        buttonComplexMotion3.setOnClickListener {
+            startActivity(Type.COMPLEX_MOTION3)
+        }
     }
 
     private fun startActivity(type: Type) {
@@ -78,6 +90,9 @@ class MainActivity : AppCompatActivity() {
             Type.PARALLAX -> ParallaxActivity::class.java
             Type.VIEW_PAGER -> ViewPagerActivity::class.java
             Type.VIEW_PAGER_LOTTIE -> ViewPagerLottieActivity::class.java
+            Type.COMPLEX_MOTION -> ComplexMotionActivity::class.java
+            Type.COMPLEX_MOTION2 -> ComplexMotion2Activity::class.java
+            Type.COMPLEX_MOTION3 -> ComplexMotion3Activity::class.java
         }
 
         val intent = Intent(this, cls)
@@ -97,6 +112,9 @@ class MainActivity : AppCompatActivity() {
         SIDE_PANEL,
         PARALLAX,
         VIEW_PAGER,
-        VIEW_PAGER_LOTTIE
+        VIEW_PAGER_LOTTIE,
+        COMPLEX_MOTION,
+        COMPLEX_MOTION2,
+        COMPLEX_MOTION3
     }
 }

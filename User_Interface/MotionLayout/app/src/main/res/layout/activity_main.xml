@@ -150,4 +150,33 @@
 
     </LinearLayout>
 
+    <LinearLayout
+    android:id="@+id/linearLayout6"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/linearLayout5">
+
+    <Button
+        android:id="@+id/buttonComplexMotion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Complex" />
+
+    <Button
+        android:id="@+id/buttonComplexMotion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Complex2" />
+
+    <Button
+        android:id="@+id/buttonComplexMotion3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Complex3" />
+
+</LinearLayout>
+
 </androidx.constraintlayout.motion.widget.MotionLayout>
