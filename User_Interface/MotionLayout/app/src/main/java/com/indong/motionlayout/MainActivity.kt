@@ -37,6 +37,14 @@ class MainActivity : AppCompatActivity() {
         buttonCoordinatorLayout2.setOnClickListener {
             startActivity(Type.COORDINATOR_LAYOUT2)
         }
+
+        buttonDrawerLayout.setOnClickListener {
+            startActivity(Type.DRAWER_LAYOUT)
+        }
+
+        buttonDrawerLayout2.setOnClickListener {
+            startActivity(Type.DRAWER_LAYOUT2)
+        }
     }
 
     private fun startActivity(type: Type) {
@@ -48,6 +56,8 @@ class MainActivity : AppCompatActivity() {
             Type.KEYFRAME_CYCLE -> KeyframeCycleActivity::class.java
             Type.COORDINATOR_LAYOUT -> CoordinatorLayoutActivity::class.java
             Type.COORDINATOR_LAYOUT2 -> CoordinatorLayout2Activity::class.java
+            Type.DRAWER_LAYOUT -> DrawerLayoutActivity::class.java
+            Type.DRAWER_LAYOUT2 -> DrawerLayout2Activity::class.java
         }
 
         val intent = Intent(this, cls)
@@ -61,6 +71,8 @@ class MainActivity : AppCompatActivity() {
         KEYFRAME_INTERPOLATION,
         KEYFRAME_CYCLE,
         COORDINATOR_LAYOUT,
-        COORDINATOR_LAYOUT2
+        COORDINATOR_LAYOUT2,
+        DRAWER_LAYOUT,
+        DRAWER_LAYOUT2
     }
 }
