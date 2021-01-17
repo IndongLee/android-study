@@ -18,17 +18,19 @@ class BasicActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            BasicActivityView()
+            BasicActivityView {
+                Greeting(name = "Android")
+            }
         }
     }
 }
 
 @Composable
-fun BasicActivityView() {
+fun BasicActivityView(content: @Composable () -> Unit) {
     ComposeTheme {
         // A surface container using the 'background' color from the theme
         Surface(color = Color.Yellow) {
-            Greeting("Android")
+            content()
         }
     }
 }
@@ -42,5 +44,7 @@ fun Greeting(name: String) {
 @Preview(showBackground = true, name = "Text Preview")
 @Composable
 fun DefaultPreview2() {
-    BasicActivityView()
+    BasicActivityView {
+        Greeting(name = "Android")
+    }
 }
