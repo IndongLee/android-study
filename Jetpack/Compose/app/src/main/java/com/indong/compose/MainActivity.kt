@@ -1,16 +1,21 @@
 package com.indong.compose
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.AmbientContext
+import androidx.compose.ui.platform.ContextAmbient
 import androidx.compose.ui.platform.setContent
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.text.style.TextOverflow
@@ -21,8 +26,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            NewStory()
+            View()
         }
+    }
+}
+
+@Composable
+fun View() {
+    val context = AmbientContext.current
+    Column(Modifier.padding(16.dp)) {
+        NewStory()
+        ActivityButton(context, BasicActivity::class.java)
     }
 }
 
@@ -32,7 +46,7 @@ fun NewStory() {
     MaterialTheme {
         val typography = MaterialTheme.typography
 
-        Column(Modifier.padding(16.dp)) {
+        Column {
             val imageModifier = Modifier
                 .preferredHeight(180.dp)
                 .fillMaxHeight()
@@ -66,8 +80,19 @@ fun NewStory() {
     }
 }
 
+@Composable
+fun ActivityButton(context: Context, activity: Class<out AppCompatActivity>) {
+    Button(onClick = {
+        val intent = Intent(context, activity)
+        context.startActivity(intent)
+    },
+    modifier = Modifier.padding(0.dp, 10.dp, 0.dp, 0.dp)) {
+        Text(text = "Basics")
+    }
+}
+
 @Preview
 @Composable
 fun DefaultPreview() {
-    NewStory()
+    View()
 }
