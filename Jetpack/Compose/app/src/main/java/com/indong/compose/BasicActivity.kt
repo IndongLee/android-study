@@ -29,6 +29,8 @@ class BasicActivity : AppCompatActivity() {
 
 @Composable
 fun MyScreenContent(names: List<String> = listOf("Android", "there")) {
+    val counterState = remember { mutableStateOf(0) }
+
     ComposeTheme {
         // A surface container using the 'background' color from the theme
         Surface(color = Color.Yellow) {
@@ -38,7 +40,12 @@ fun MyScreenContent(names: List<String> = listOf("Android", "there")) {
                     Divider(color = Color.Black)
                 }
                 Divider(color = Color.Transparent, thickness = 32.dp)
-                Counter()
+                Counter(
+                    count = counterState.value,
+                    updateCount = { newCount ->
+                        counterState.value = newCount
+                    }
+                )
             }
         }
     }
@@ -51,11 +58,10 @@ fun Greeting(name: String) {
 }
 
 @Composable
-fun Counter() {
-    val count = remember { mutableStateOf(0) }
-    
-    Button(onClick = { count.value++ }) {
-        Text(text = "I've been clicked ${count.value} times")
+fun Counter(count: Int, updateCount: (Int) -> Unit) {
+
+    Button(onClick = { updateCount(count+1) }) {
+        Text(text = "I've been clicked $count times")
     }
 }
 
