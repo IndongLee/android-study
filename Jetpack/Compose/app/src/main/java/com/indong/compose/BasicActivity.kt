@@ -3,11 +3,9 @@ package com.indong.compose
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.Button
-import androidx.compose.material.Divider
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -22,7 +20,19 @@ class BasicActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MyScreenContent()
+            MyApp {
+                MyScreenContent()
+            }
+        }
+    }
+}
+
+@Composable
+fun MyApp(content: @Composable () -> Unit) {
+    ComposeTheme {
+        // A surface container using the 'background' color from the theme
+        Surface(color = Color.Yellow) {
+            content()
         }
     }
 }
@@ -31,23 +41,19 @@ class BasicActivity : AppCompatActivity() {
 fun MyScreenContent(names: List<String> = listOf("Android", "there")) {
     val counterState = remember { mutableStateOf(0) }
 
-    ComposeTheme {
-        // A surface container using the 'background' color from the theme
-        Surface(color = Color.Yellow) {
-            Column {
-                for (name in names) {
-                    Greeting(name = name)
-                    Divider(color = Color.Black)
-                }
-                Divider(color = Color.Transparent, thickness = 32.dp)
-                Counter(
-                    count = counterState.value,
-                    updateCount = { newCount ->
-                        counterState.value = newCount
-                    }
-                )
+    Column(modifier = Modifier.fillMaxHeight()) {
+        Column(modifier = Modifier.weight(1f)) {
+            for (name in names) {
+                Greeting(name = name)
+                Divider(color = Color.Black)
             }
         }
+        Counter(
+            count = counterState.value,
+            updateCount = { newCount ->
+                counterState.value = newCount
+            }
+        )
     }
 }
 
@@ -60,7 +66,10 @@ fun Greeting(name: String) {
 @Composable
 fun Counter(count: Int, updateCount: (Int) -> Unit) {
 
-    Button(onClick = { updateCount(count+1) }) {
+    Button(
+        onClick = { updateCount(count + 1) },
+        colors = ButtonConstants.defaultButtonColors(backgroundColor = if (count > 5) Color.Green else Color.White)
+    ) {
         Text(text = "I've been clicked $count times")
     }
 }
