@@ -24,6 +24,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.setContent
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.indong.compose.ui.theme.BasicCodelabTheme
 import com.indong.compose.ui.theme.ComposeTheme
 
 class BasicActivity : AppCompatActivity() {
@@ -39,7 +40,7 @@ class BasicActivity : AppCompatActivity() {
 
 @Composable
 fun MyApp(content: @Composable () -> Unit) {
-    ComposeTheme {
+    BasicCodelabTheme {
         // A surface container using the 'background' color from the theme
         Surface(color = Color.Yellow) {
             content()
@@ -100,5 +101,10 @@ fun NameList(names: List<String>, modifier: Modifier = Modifier) {
 @Preview(showBackground = true, name = "Text Preview")
 @Composable
 fun DefaultPreview2() {
-    MyScreenContent()
+    BasicCodelabTheme {
+        // A surface container using the 'background' color from the theme
+        Surface(color = Color.Yellow) {
+            MyScreenContent()
+        }
+    }
 }
