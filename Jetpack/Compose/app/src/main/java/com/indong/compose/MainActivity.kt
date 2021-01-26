@@ -36,7 +36,8 @@ fun View() {
     val context = AmbientContext.current
     Column(Modifier.padding(16.dp)) {
         NewStory()
-        ActivityButton(context, BasicActivity::class.java)
+        ActivityButton(context = context, activity = BasicActivity::class.java, "Basic")
+        ActivityButton(context = context, activity = LayoutActivity::class.java, "Layout")
     }
 }
 
@@ -81,13 +82,13 @@ fun NewStory() {
 }
 
 @Composable
-fun ActivityButton(context: Context, activity: Class<out AppCompatActivity>) {
+fun ActivityButton(context: Context, activity: Class<out AppCompatActivity>, text: String) {
     Button(onClick = {
         val intent = Intent(context, activity)
         context.startActivity(intent)
     },
     modifier = Modifier.padding(0.dp, 10.dp, 0.dp, 0.dp)) {
-        Text(text = "Basics")
+        Text(text = text)
     }
 }
 
