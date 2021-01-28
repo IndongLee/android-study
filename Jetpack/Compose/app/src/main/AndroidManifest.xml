@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Compose">
         <activity
+            android:name=".StateActivity"
+            android:label="@string/title_activity_state"
+            android:theme="@style/Theme.Compose.NoActionBar"></activity>
+        <activity
             android:name=".LayoutActivity"
             android:label="@string/title_activity_layout"
-            android:theme="@style/Theme.Compose.NoActionBar"></activity>
+            android:theme="@style/Theme.Compose.NoActionBar" />
         <activity
             android:name=".BasicActivity"
             android:label="@string/title_activity_basic"
