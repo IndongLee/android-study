@@ -3,4 +3,6 @@
     <string name="title_activity_basic">My Compose App</string>
     <string name="title_activity_layout">My Compose App</string>
     <string name="title_activity_state">My Compose App</string>
+    <string name="title_activity_hello_codelab">My Compose App</string>
+    <string name="title_activity_todo">My Compose App</string>
 </resources>

@@ -10,9 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Compose">
         <activity
+            android:name=".state.todo.TodoActivity"
+            android:label="@string/title_activity_todo"
+            android:theme="@style/Theme.Compose.NoActionBar"></activity>
+        <activity
+            android:name=".state.examples.HelloCodelabActivity"
+            android:label="@string/title_activity_hello_codelab"
+            android:theme="@style/Theme.Compose.NoActionBar" />
+        <activity
             android:name=".StateActivity"
             android:label="@string/title_activity_state"
-            android:theme="@style/Theme.Compose.NoActionBar"></activity>
+            android:theme="@style/Theme.Compose.NoActionBar" />
         <activity
             android:name=".LayoutActivity"
             android:label="@string/title_activity_layout"
