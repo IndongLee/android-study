@@ -21,6 +21,8 @@ import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.indong.compose.state.examples.HelloCodelabActivity
+import com.indong.compose.state.todo.TodoActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,6 +40,8 @@ fun View() {
         NewStory()
         ActivityButton(context = context, activity = BasicActivity::class.java, "Basic")
         ActivityButton(context = context, activity = LayoutActivity::class.java, "Layout")
+        ActivityButton(context = context, activity = HelloCodelabActivity::class.java, "State - xml")
+        ActivityButton(context = context, activity = TodoActivity::class.java, "State - compose")
     }
 }
 
