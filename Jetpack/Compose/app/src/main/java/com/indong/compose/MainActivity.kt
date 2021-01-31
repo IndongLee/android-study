@@ -23,6 +23,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.indong.compose.state.examples.HelloCodelabActivity
 import com.indong.compose.state.todo.TodoActivity
+import com.indong.compose.theming.ui.ThemingActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,6 +43,7 @@ fun View() {
         ActivityButton(context = context, activity = LayoutActivity::class.java, "Layout")
         ActivityButton(context = context, activity = HelloCodelabActivity::class.java, "State - xml")
         ActivityButton(context = context, activity = TodoActivity::class.java, "State - compose")
+        ActivityButton(context = context, activity = ThemingActivity::class.java, "Theming")
     }
 }
 
