@@ -21,13 +21,14 @@ import androidx.compose.ui.unit.dp
 import com.indong.compose.R
 import com.indong.compose.theming.data.Post
 import com.indong.compose.theming.data.PostRepo
+import com.indong.compose.ui.theme.JetNewsTheme
 import java.util.*
 
 @Composable
 fun Home() {
     val featured = remember { PostRepo.getFeaturedPost() }
     val posts = remember { PostRepo.getPosts() }
-    MaterialTheme {
+    JetNewsTheme {
         Scaffold(
             topBar = { AppBar() }
         ) { innerPadding ->
