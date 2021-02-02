@@ -10,9 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Compose">
         <activity
+            android:name=".MigrationActivity"
+            android:label="@string/title_activity_migration"
+            android:theme="@style/Theme.Compose.NoActionBar"></activity>
+        <activity
+            android:name=".RouteDetailActivity"
+            android:label="@string/title_activity_route_detail"
+            android:theme="@style/Theme.Compose.NoActionBar" />
+        <activity
             android:name=".theming.ui.ThemingActivity"
             android:label="@string/title_activity_theming"
-            android:theme="@style/Theme.Compose.NoActionBar"></activity>
+            android:theme="@style/Theme.Compose.NoActionBar" />
         <activity
             android:name=".state.todo.TodoActivity"
             android:label="@string/title_activity_todo"
